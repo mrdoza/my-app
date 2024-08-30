@@ -8,7 +8,6 @@ function Info(props) {
     const email = formData.get("email");
     const city = formData.get("city");
     const state = formData.get("state");
-    const zip = formData.get("zip");
 
     props.setFormData({
       name: name,
@@ -16,7 +15,6 @@ function Info(props) {
       email: email,
       city: city,
       state: state,
-      zip: zip,
     });
   };
 
@@ -86,21 +84,8 @@ function Info(props) {
             id="state"
           />
         </div>
-        <div>
-          <label htmlFor="zip">
-            Zip:
-            <br />
-          </label>
-
-          <input
-            class="input input-primary input-sm"
-            type="text"
-            name="zip"
-            id="zip"
-          />
-        </div>
         <button class="btn btn-outline mt-5" type="submit">
-          Submit
+          Submit/Edit
         </button>
       </form>
     </>
