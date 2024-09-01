@@ -1,11 +1,23 @@
-import { createSignal, createEffect } from "solid-js";
+import { createSignal, createEffect, createMemo } from "solid-js";
 import Body from "./components/DisplayForm";
 import Header from "./components/Header";
 import Info from "./components/BasicInfo";
+import Edu from "./components/Edu";
 import styles from "./App.module.css";
 
 function App() {
   const [formData, setFormData] = createSignal({});
+  const [eduData, setEduData] = createSignal({});
+
+  const comData = createMemo(() => {
+    return { ...formData(), ...eduData() };
+  });
+
+  createEffect(() => {
+    console.log(comData);
+    console.log(formData());
+    console.log(eduData());
+  });
 
   return (
     <>
@@ -15,9 +27,10 @@ function App() {
       <div class={styles.App}>
         <div>
           <Info setFormData={setFormData} />
+          <Edu setEduData={setEduData} />
         </div>
         <div>
-          <Body formData={formData()} />
+          <Body comData={comData()} />
         </div>
       </div>
     </>

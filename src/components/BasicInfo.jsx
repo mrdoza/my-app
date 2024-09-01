@@ -84,7 +84,7 @@ function Info(props) {
             id="state"
           />
         </div>
-        <button class="btn btn-outline mt-5" type="submit">
+        <button class="btn btn-outline btn-sm mt-5" type="submit">
           Submit/Edit
         </button>
       </form>
