@@ -7,16 +7,14 @@ import styles from "./App.module.css";
 
 function App() {
   const [formData, setFormData] = createSignal({});
-  const [eduData, setEduData] = createSignal({});
+  const [eduData, setEduData] = createSignal([]);
 
   const comData = createMemo(() => {
-    return { ...formData(), ...eduData() };
+    return { ...formData(), eduData: eduData() };
   });
 
   createEffect(() => {
-    console.log(comData);
-    console.log(formData());
-    console.log(eduData());
+    console.log(comData());
   });
 
   return (

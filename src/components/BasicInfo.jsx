@@ -32,7 +32,6 @@ function Info(props) {
             type="text"
             name="name"
             id="name"
-            placeholder="Full Name"
           />
         </div>
         <div>
@@ -84,7 +83,7 @@ function Info(props) {
             id="state"
           />
         </div>
-        <button class="btn btn-outline btn-sm mt-5" type="submit">
+        <button class="btn btn-outline btn-sm mt-3" type="submit">
           Submit/Edit
         </button>
       </form>
