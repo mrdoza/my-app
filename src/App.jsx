@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Info from "./components/BasicInfo";
 import Edu from "./components/Edu";
 import styles from "./App.module.css";
+import Exp from "./components/Exp";
 
 function App() {
   const [formData, setFormData] = createSignal({});
@@ -26,6 +27,7 @@ function App() {
         <div>
           <Info setFormData={setFormData} />
           <Edu setEduData={setEduData} />
+          <Exp />
         </div>
         <div>
           <Body comData={comData()} />
