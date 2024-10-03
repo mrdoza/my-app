@@ -4,6 +4,8 @@ import Header from "./components/Header";
 import Info from "./components/BasicInfo";
 import Edu from "./components/Edu";
 import styles from "./App.module.css";
+
+// eslint-disable-next-line
 import Exp from "./components/Exp";
 
 function App() {
